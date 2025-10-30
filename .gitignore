@@ -1,0 +1,23 @@
+# Node
+node_modules/
+.env
+
+venv/
+*/venv/
+
+# Logs
+logs
+*.log
+
+# Build
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+model_features.pkl
+/models/yield_prediction model/crop_yield_model.pkl
+models/yield_prediction model/crop_yield_model.pkl

@@ -6,6 +6,7 @@ const contractsRouter = require('./routes/contracts');
 const newsRouter = require('./routes/news');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const biddingRoutes = require('./routes/biddingRoutes');
 
 const app = express();
 
@@ -30,6 +31,9 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/contracts', contractsRouter);
 app.use('/api/v1/news', newsRouter);
+app.use('/api/bids', biddingRoutes);
+
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {

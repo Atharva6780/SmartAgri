@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Package, DollarSign, Search } from 'lucide-react';
+import AuctionMarketplace from './Auctions';
 
-export default function Marketplace() {
+export default function Marketplace( user) {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -202,6 +203,7 @@ export default function Marketplace() {
           ))}
         </div>
       )}
+      <AuctionMarketplace user={user}/>
     </div>
   );
 }

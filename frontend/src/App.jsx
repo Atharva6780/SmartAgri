@@ -111,7 +111,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage isAuthenticated={isAuthenticated} user={user} />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/marketplace" element={<Marketplace user = {user} />} />
             <Route path="/listing/:id" element={<ListingDetailPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/chatbot" element={<ChatbotPage user={user} />} />
